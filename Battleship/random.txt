@@ -1,0 +1,65 @@
+  public static boolean placeRandomShip(char board[][], int len, int id, Random rand) {
+    	int x=1;
+    	rand = new Random();
+    	while(x == 1) {
+    	boolean dir = rand.nextBoolean();
+    	int i=0;
+    	int xcoord=0;
+    	int ycoord=0;
+    	xcoord = rand.nextInt(board[0].length);
+    	while(i < Config.RAND_SHIP_TRIES) {
+    		if((board[0].length -  xcoord) > len ) {
+    		break;
+    		}
+    	i++;
+    	}
+    	i=0;
+    	while(i < Config.RAND_SHIP_TRIES) {
+    	ycoord = rand.nextInt(board.length);
+    	if((board.length -  ycoord) > len ) {
+    		break;
+    		}
+    	i++;
+    	}
+    	
+        if(dir){
+        	 if((board.length - ycoord) > len){
+                i = ycoord;
+                for(int j = 0; j < len; ++j){
+                	if(board[i][xcoord] == Config.WATER_CHAR){
+                                board[i][xcoord] = Integer.toString(id).charAt(0) ;
+                                if(j == len - 1) {
+                                	 return true;
+                            }
+                                ++i;
+                	}
+                           
+                        }
+                    }
+                    else{
+                        return false;
+                }
+            
+        }
+  
+        else if(!dir){
+           
+            	i = xcoord;
+                for(int j = 0; j < len; ++j){
+                    if(board[ycoord][i] == Config.WATER_CHAR){
+                                board[ycoord][j] = Integer.toString(id).charAt(0);
+                                if(j == len-1) {
+                                	return true;
+                                }
+                           i++;
+                        }
+                    else {
+                    	return false;
+                    }
+                    }
+                }
+                    else{
+                        return false;
+                    }
+        return true;
+                }

@@ -1,0 +1,37 @@
+public static boolean placeRandomShip(char board[][], int len, int id, Random rand) {
+    	int x = 0 ;
+    	
+    	rand = new Random();
+    	int xcoord = 0;
+    	int ycoord = 0;
+    	int a = 0;
+    	int i = 0;
+    	while( a != 1 && x < Config.RAND_SHIP_TRIES ) {
+    		
+    	while(i < Config.RAND_SHIP_TRIES) {
+        	xcoord = rand.nextInt(board[0].length);
+        		if((board[0].length -  xcoord) > len ) {
+        		break;
+        		}
+        	i++;
+        	}
+    	
+        	int j=0;
+        	while(j < Config.RAND_SHIP_TRIES) {
+        	ycoord = rand.nextInt(board.length);
+        	if((board.length -  ycoord) > len ) {
+        		break;
+        		}
+        	j++;
+        	}
+        	
+    	boolean dir = rand.nextBoolean();
+    		a = checkWater(board, xcoord, ycoord, len, dir);
+    		if(a==1) {
+    			boolean ship = placeShip(board, xcoord, ycoord, len, dir, id);
+    			return true;
+    		}
+    		++x;
+    	}
+        return false;
+                }

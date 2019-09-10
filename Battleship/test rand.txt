@@ -1,0 +1,13 @@
+       
+        char[][] board = new char[3][3];
+        initBoard(board);
+        Random rand = new Random();
+        board[0][1] = 'z';
+        board[0][2] = 'z';
+        board[0][0] = 'z';
+        
+        board[1][2] = 'z';
+        board[2][0] = 'z';
+        board[2][1] = 'z';
+        board[2][2] = 'z';
+        System.out.println(placeRandomShip(board , 2 , 1, rand ));

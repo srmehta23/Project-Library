@@ -1,0 +1,4 @@
+seed = 50
+ocean_width = 60
+ocean_height= 60
+starting_fish = 70

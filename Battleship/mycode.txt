@@ -1,0 +1,43 @@
+int var = 0;
+    	if(dir) {
+    		if(board[ycoord][xcoord] == Config.WATER_CHAR) {
+    			for(int i=ycoord; i < ycoord + len; i++) {
+    				if(board[i][xcoord] != Config.WATER_CHAR) {
+    					var = -1;
+    				}
+    				else {
+    					var = 1;
+    			}
+    		}
+    		}
+    		else{
+    			var = -1;
+    		}
+    		if((ycoord+len) > board.length){
+     			var = -2;
+     		}
+    	
+    	}
+    	//Vertical
+    	else {
+    		if(board[ycoord][xcoord] == Config.WATER_CHAR) {
+    			for(int j = xcoord; j < xcoord + len; ++j) {
+    				if(board[ycoord][j] != Config.WATER_CHAR) {
+    					var = -1;
+    				}
+    				else {
+    					var = 1;
+    			}
+    		}
+    	}
+    		else {
+    		var = -1;
+    		}
+    		if((xcoord+len) > board[0].length){
+    			var = -2;
+    		}	
+       	}
+    
+    	return var;
+    }
+            

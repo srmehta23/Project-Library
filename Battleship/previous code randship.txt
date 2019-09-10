@@ -1,0 +1,75 @@
+ public static boolean placeRandomShip(char board[][], int len, int id, Random rand) {
+    	rand = new Random();
+    	boolean dir = rand.nextBoolean();
+    	int i=0;
+    	int xcoord=0;
+    	int ycoord=0;
+    	id = rand.nextInt(10);
+    	while(i < Config.RAND_SHIP_TRIES) {
+    	xcoord = rand.nextInt(board[0].length);
+    		if((board[0].length -  xcoord) > len ) {
+    		break;
+    		}
+    	i++;
+    	}
+    	i=0;
+    	while(i < Config.RAND_SHIP_TRIES) {
+    	ycoord = rand.nextInt(board.length);
+    	if((board.length -  ycoord) > len ) {
+    		break;
+    		}
+    	i++;
+    	}
+    	
+        if(dir){
+        	 if(board.length - ycoord >= len){
+                i = ycoord;
+                int w = ycoord;
+                for(int j = 0; j < len; ++j){
+                    if(board[i][xcoord] == Config.WATER_CHAR){
+                        if(j == len - 1){
+                            for(int x = 0; x < len; ++x){
+                                board[w][xcoord] = Integer.toString(id).charAt(0) ;
+                                ++w;
+                            }
+                            return true;
+                        }
+                    }
+                    else{
+                        return false;
+                    } 
+                    ++i; 
+                }
+            
+        }
+        	 else {
+        		 return false;
+        	 }
+        }
+        else if(!dir){
+           
+            	i = xcoord;
+                int w = xcoord;
+                for(int j = 0; j < len; ++j){
+                    if(board[ycoord][i] == Config.WATER_CHAR){
+                        if(j == len - 1){
+                            for(int x = 0; x < len; ++x){
+                                board[ycoord][w] = Integer.toString(id).charAt(0);
+                                ++w;
+                            }
+                            return true;
+                        }
+                    }
+                    else{
+                        return false;
+                    }
+                    ++i;
+                }
+            
+        }
+
+    	
+    
+    	
+        return false;
+    }

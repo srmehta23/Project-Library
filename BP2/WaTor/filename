@@ -1,0 +1,8 @@
+seed=234
+ocean_width=5
+ocean_height=2
+starting_fish=6
+starting_sharks=1
+fish_breed=3
+sharks_breed=7
+sharks_starve=9

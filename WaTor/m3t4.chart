@@ -1,0 +1,41 @@
+seed=23
+ocean_width=20
+ocean_height=15
+starting_fish=50
+starting_sharks=10
+fish_breed=4
+sharks_breed=8
+sharks_starve=10
+
+Population Chart
+Numbers of fish(F) and sharks(S) in units of 6.
+F 50,S 10    1)SSFFFFFFF                                         
+F 51,S 12    2)SSFFFFFFF                                         
+F 55,S 14    3)SSSFFFFFFF                                        
+F 60,S 14    4)SSSFFFFFFF                                        
+F 65,S 15    5)SSSFFFFFFFF                                       
+F 69,S 15    6)SSSFFFFFFFFF                                      
+F 70,S 16    7)SSSFFFFFFFFF                                      
+F 76,S 19    8)SSSSFFFFFFFFF                                     
+F 78,S 20    9)SSSSFFFFFFFFF                                     
+F 89,S 20   10)SSSSFFFFFFFFFFF                                   
+F 86,S 24   11)SSSSFFFFFFFFFFF                                   
+F 79,S 28   12)SSSSSFFFFFFFFF                                    
+F 81,S 27   13)SSSSSFFFFFFFFF                                    
+F 79,S 28   14)SSSSSFFFFFFFFF                                    
+F 90,S 27   15)SSSSSFFFFFFFFFF                                   
+F 82,S 29   16)SSSSSFFFFFFFFF                                    
+F 73,S 35   17)SSSSSSFFFFFFF                                     
+F 71,S 37   18)SSSSSSSFFFFF                                      
+F 60,S 37   19)SSSSSSSFFF                                        
+F 60,S 44   20)SSSSSSSSFF                                        
+F 46,S 52   21)FFFFFFFFS                                         
+F 28,S 51   22)FFFFFSSSS                                         
+F 26,S 53   23)FFFFFSSSS                                         
+F 20,S 53   24)FFFFSSSSS                                         
+F 19,S 53   25)FFFFSSSSS                                         
+F 13,S 63   26)FFFSSSSSSSS                                       
+F  5,S 66   27)FSSSSSSSSSS                                       
+F  4,S 64   28)FSSSSSSSSSS                                       
+F  2,S 73   29)FSSSSSSSSSSSS                                     
+F  0,S 88   30)SSSSSSSSSSSSSSS                                   
